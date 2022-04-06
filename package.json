@@ -1,11 +1,11 @@
 {
-  "name": "tutubi-image-tool",
+  "name": "johnscore",
   "author": "Hanut Singh Gusain",
   "main": "dist/main.js",
   "version": "1.0.0",
   "scripts": {
     "postinstall": "npm run build",
-    "prebuild": "node_modules/.bin/rimraf dist/**/*",
+    "prebuild": "rimraf dist/**/*",
     "build": "tsc",
     "test": "mocha -r ts-node/register tests/**/*.spec.ts"
   },

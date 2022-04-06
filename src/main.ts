@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 
 import ReadCli, { ERR_CLI_INV_NUM_ARGS } from "./cli";
 import fs from "fs";
