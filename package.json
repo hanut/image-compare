@@ -1,0 +1,23 @@
+{
+  "name": "tutubi-image-tool",
+  "author": "Hanut Singh Gusain",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.0",
+    "@types/resemblejs": "^4.1.0",
+    "@types/sharp": "^0.30.1",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "fast-csv": "^4.3.6",
+    "resemblejs": "^4.1.0",
+    "sharp": "^0.30.3"
+  }
+}
