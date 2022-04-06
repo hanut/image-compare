@@ -1,3 +1,10 @@
+import fs from "fs";
+import path from "path";
+
+export const APP_VERSION = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "..", "package.json")).toString()
+)["version"];
+
 export const ERR_CLI_INV_NUM_ARGS =
   "JIT requires the absolute path to the input csv as the first CLI argument";
 
@@ -11,6 +18,10 @@ export const ERR_CLI_INV_NUM_ARGS =
 const ReadCLI = function ReadCLI(): string {
   if (process.argv.length < 3) {
     throw new Error(ERR_CLI_INV_NUM_ARGS);
+  }
+  if (process.argv[2] === "version") {
+    console.log("John's Tool - Version " + APP_VERSION);
+    process.exit(1);
   }
   return process.argv[2];
 };

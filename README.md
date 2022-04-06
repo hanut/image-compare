@@ -31,7 +31,7 @@ all the libraries/packages used by John's Image Tool -
 
 1. **fast-csv** - Fast-csv is library for parsing and formatting CSVs or any other delimited value file in node.
 2. **sharp** - To work with input images so that both images as processed to be comparable
-3. **pixelmatch** - Used to actually match the images
+3. **resemblejs** - Used to actually match the images
 
 
 ## Testing
@@ -39,5 +39,13 @@ Test cases can be run using the `npm run test` command
 
 There are test fixtures for all modules/functions in the `/tests` folder
 
-## Updates & Versioning
-The latest version of the code is always available via the github repo
+## User Guide
+
+### Installation
+You can install the tool using the following command -
+
+```bash
+npm i -g https://github.com/hanut/image-compare
+```
+
+###

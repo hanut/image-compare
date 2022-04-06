@@ -1,4 +1,5 @@
-import ReadCli from "./cli";
+
+import ReadCli, { ERR_CLI_INV_NUM_ARGS } from "./cli";
 import fs from "fs";
 import { OutputRow, ReadCSV, WriteCSV } from "./csv";
 import { ConvertImages } from "./image";
@@ -54,7 +55,15 @@ async function main() {
 }
 
 // Call the main function
-main().catch(console.error);
+main().catch((error) => {
+  if(error.message === ERR_CLI_INV_NUM_ARGS) {
+    console.log(ERR_CLI_INV_NUM_ARGS);
+    console.log("Correct usage -");
+    console.log("> johnscore <absolute path to input csv file> or version");
+    return;
+  }
+  console.error(error);
+});
 
 process.on("uncaughtException", (error) => {
   console.error("Unhandled exception", error);
